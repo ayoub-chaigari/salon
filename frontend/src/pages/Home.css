@@ -1,0 +1,229 @@
+.home {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9")
+    center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  animation: fadeScale 1s ease forwards;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-buttons button {
+  padding: 12px 25px;
+  margin: 5px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* WHY */
+.why {
+  padding: 100px 20px;
+  background: #f6eae3;
+  text-align: center;
+}
+
+.why h4 {
+  letter-spacing: 3px;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+
+.why h2 {
+  margin: 15px 0 30px;
+  font-size: 2.5rem;
+}
+
+.why button {
+  margin-top: 15px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.why button:hover {
+  transform: scale(1.05);
+}
+
+/* SERVICES */
+.services {
+  padding: 100px 20px;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-card span {
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+/* POPULAR */
+.popular {
+  background: url("https://images.unsplash.com/photo-1600180758895-03f9e34cf7f6?auto=format&fit=crop&w=1470&q=80")
+    center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 100px 20px;
+  color: white;
+  text-align: center;
+}
+
+.popular-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.popular-card {
+  background: white;
+  color: #333;
+  padding: 20px;
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.popular-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .services-grid, .popular-grid {
+    gap: 15px;
+  }
+
+  .service-card, .popular-card {
+    padding: 20px 15px;
+  }
+}

@@ -1,0 +1,77 @@
+.footer {
+  background: #111;
+  color: #eee;
+  padding: 60px 20px 30px;
+  font-family: "Georgia", serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* LOGO */
+.footer-logo {
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+/* TEXT */
+.footer-text {
+  font-size: 0.9rem;
+  color: #bbb;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* SOCIAL LINKS */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #b08b5e;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+/* HOVER EFFECT */
+.footer-socials a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 1px;
+  background: #b08b5e;
+  transition: width 0.3s ease;
+}
+
+.footer-socials a:hover::after {
+  width: 100%;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .footer-socials {
+    gap: 15px;
+  }
+}
